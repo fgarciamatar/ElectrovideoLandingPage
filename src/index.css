@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-electric-red: #d32f2f;
+  --color-electric-red-dim: #b71c1c;
+  --color-electric-yellow: #fbc02d;
+  --color-electric-yellow-dim: #f57f17;
+  --color-electric-black: #ffffff;
+  --color-electric-dark: #f8fafc;
+  --color-electric-darker: #f1f5f9;
+  --color-electric-grey: #e2e8f0;
+  
+  --font-display: "Outfit", sans-serif;
+  --font-sans: "Inter", sans-serif;
+
+  --animate-electric-pulse: electric-pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  --animate-neon-flow: neon-flow 8s linear infinite;
+  --animate-infinite-scroll: infinite-scroll 45s linear infinite;
+  --animate-spin-slow: spin 30s linear infinite;
+
+  @keyframes electric-pulse {
+    0%, 100% {
+      opacity: 1;
+      text-shadow: 0 0 6px rgba(211, 47, 47, 0.4);
+    }
+    50% {
+      opacity: 0.8;
+      text-shadow: 0 0 10px rgba(251, 192, 45, 0.6);
+    }
+  }
+
+  @keyframes neon-flow {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  @keyframes infinite-scroll {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+}
+
+/* Global Custom Styles */
+html {
+  scroll-behavior: smooth;
+  background-color: #ffffff;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  color: #1e293b;
+  overflow-x: hidden;
+  background-color: #ffffff;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+::-webkit-scrollbar-thumb {
+  background: #d32f2f;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #fbc02d;
+}
+
+/* Electric Grid Background (Classic Light) */
+.electric-grid {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(15, 23, 42, 0.02) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(15, 23, 42, 0.02) 1px, transparent 1px);
+}
+
+.electric-grid-red {
+  background-size: 60px 60px;
+  background-image: 
+    linear-gradient(to right, rgba(211, 47, 47, 0.02) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(211, 47, 47, 0.02) 1px, transparent 1px);
+}
+
+/* Glassmorphism utilities */
+.electric-glass {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(15, 23, 42, 0.06);
+}
+
+.electric-glass-red {
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(211, 47, 47, 0.15);
+}
+
+/* Typography styles */
+.font-display {
+  font-family: 'Outfit', sans-serif;
+}
+
+/* Hide Default Styles from Vite template */
+#root {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  max-width: none;
+  min-height: auto;
+  display: block;
+}
