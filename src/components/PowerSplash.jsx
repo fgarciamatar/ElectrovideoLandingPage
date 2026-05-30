@@ -193,7 +193,7 @@ export default function PowerSplash({ onPowerOn }) {
                     <div className="absolute top-0 bottom-0 left-1/2 -translate-x-1/2 w-[1px] bg-slate-300/30 shadow-sm pointer-events-none"></div>
 
                     <span className={`text-[13px] font-black font-sans tracking-wide transition-all duration-300 pointer-events-none ${
-                      isFlipped ? 'text-slate-400/50 scale-90' : 'text-slate-950 scale-110'
+                      isFlipped ? 'text-slate-800 scale-90' : 'text-black scale-110'
                     }`}>
                       OFF
                     </span>
@@ -214,7 +214,7 @@ export default function PowerSplash({ onPowerOn }) {
                     )}
 
                     <span className={`text-[13px] font-black font-sans tracking-wide transition-all duration-300 mr-10 pointer-events-none ${
-                      isFlipped ? 'text-slate-950 scale-120' : 'text-slate-400/50 scale-90'
+                      isFlipped ? 'text-black scale-120' : 'text-slate-800 scale-90'
                     }`}>
                       ON
                     </span>
