@@ -69,7 +69,7 @@ export default function Hero() {
             variants={containerVariants}
             initial="hidden"
             animate="visible"
-            className="lg:col-span-8 xl:col-span-7 text-left flex flex-col items-start bg-white/95 backdrop-blur-md p-8 sm:p-10 md:p-12 rounded-3xl border border-slate-200/80 shadow-2xl"
+            className="lg:col-span-8 xl:col-span-7 text-left flex flex-col items-start bg-white/75 backdrop-blur-lg p-8 sm:p-10 md:p-12 rounded-3xl border border-white/50 shadow-2xl"
           >
             {/* Status / Location Badge */}
             <motion.div
